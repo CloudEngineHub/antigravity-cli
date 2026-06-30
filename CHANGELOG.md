@@ -2,6 +2,16 @@
 
 The terminal-first surface to interact with Antigravity agents. Stay in your flow without context switching.
 
+## 1.0.14
+
+- Allowed image pasting from the clipboard in local tmux sessions.
+- Removed the max limit for the `/goal` command, allowing goals to run indefinitely until completed or cancelled.
+- Enabled "always proceeds" mode for subagents to auto approve artifacts, preventing them from hanging when the parent is blocked.
+- Fixed plugin import logic to copy the entire plugin directory, preventing it from stripping non-skill directories (like `shared/`).
+- Fixed an MCP configuration path mismatch in the CLI and permission manager to ensure reliable custom MCP server loading.
+- Fixed a TUI layout race condition caused by stale input state in the conversation model.
+- Fixed a bug where the inline viewport was not properly reset after a conversation rewind.
+
 ## 1.0.13
 
 - Fixed a bug where the CLI would temporarily render skill commands without their slash prefix during optimistic updates by deferring prefix stripping to the serialization boundary, ensuring the UI always displays exactly what the user typed.
